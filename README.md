@@ -6,8 +6,6 @@ Clone repo, run commands:
 
 Now access `localhost:8080/symfony` in your browser and you accessed the symfony app.
 
-**NOTE:** It won't work yet because app_dev, permissions, composer deps not installed
-
-**TODO:** Make it work.
+**Note:** it is important to put your app inside the `/var/html/symfony` dir, as automated script will go there to install composer deps for the app 
 
 

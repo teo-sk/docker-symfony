@@ -1,0 +1,5 @@
+setfacl -R -m u:"www-data":rwX -m u:"root":rwX /var/www/html/symfony/app/cache /var/www/html/symfony/app/logs
+setfacl -dR -m u:"www-data":rwX -m u:"root":rwX /var/www/html/symfony/app/cache /var/www/html/symfony/app/logs
+
+cd /var/www/html/symfony
+composer.phar update

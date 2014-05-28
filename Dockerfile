@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update -y
-RUN apt-get install -y apache2 php5 php-apc php5-cli php-pear php5-curl php5-gd php5-imagick php5-intl php5-mysqlnd php5-pgsql php5-sqlite php5-xdebug curl acl
+RUN apt-get install -y apache2 php5 php-apc php5-cli php-pear php5-curl php5-gd php5-imagick php5-intl php5-mysqlnd php5-pgsql php5-sqlite php5-xdebug php5-mongo curl acl vim nano
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=bin
 
@@ -13,8 +13,10 @@ ENV APACHE_LOCK_DIR     /var/lock/apache2
 ENV APACHE_LOG_DIR      /var/log/apache2
 
 ADD info.php /var/www/html/
+ADD php.ini /etc/php5/apache2/
 
 ADD 00_apache /opt/run/
+ADD 01_symfony /opt/run/
 
 ADD run_all /opt/bin/
 RUN chown -R root:root /opt/
