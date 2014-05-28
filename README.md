@@ -10,4 +10,4 @@ Now access `localhost:8080/symfony` in your browser and you accessed the symfony
 
 **Note:** You will have to allow your ip address inside `app_dev.php` if you want to use it.
 
-
+Tested with [Konkurencia Symfony Bootsrap](https://github.com/konkurencia/symfony-bootstrap) as Symfony application
