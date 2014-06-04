@@ -3,3 +3,4 @@ setfacl -dR -m u:"www-data":rwX -m u:"root":rwX /var/www/html/symfony/app/cache 
 
 cd /var/www/html/symfony
 composer.phar update
+php app/console assets:install --symlink web
