@@ -1,7 +1,8 @@
 FROM ubuntu:14.04
 
 RUN apt-get update -y
-RUN apt-get install -y apache2 php5 php-apc php5-cli php-pear php5-curl php5-gd php5-imagick php5-intl php5-mysqlnd php5-pgsql php5-sqlite php5-xdebug php5-mongo curl acl vim nano
+RUN apt-get install -y git
+RUN apt-get install -y apache2 mysql-server php5 php-apc php5-cli php-pear php5-curl php5-gd php5-imagick php5-intl php5-mysqlnd php5-pgsql php5-sqlite php5-xdebug php5-mongo curl acl vim nano
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=bin
 
